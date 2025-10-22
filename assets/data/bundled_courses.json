@@ -1,0 +1,106 @@
+{
+  "courses": [
+    {
+      "id": "cit108",
+      "course_code": "CIT 108",
+      "title": "Problem-Solving & Algorithmic Thinking",
+      "description": "This course introduces students to the fundamentals of problem-solving within computing contexts. Students will study how to analyse problems, model them, and design systematic procedures (algorithms) to arrive at solutions. Topics include: the nature of problems and strategies for solving them (e.g., trial and error, heuristics, means-ends analysis), computational approaches (brute-force, divide-and-conquer, dynamic programming, randomized methods), and algorithm representation techniques (flowcharts, pseudocode). The aim is to equip students with the logic, structure and methodology necessary to approach and solve routine and non-routine problems in software and computing environments.",
+      "category": "Programming Languages",
+      "level": "100 Level",
+      "file_size": 2850000,
+      "is_bundled": true,
+      "firebase_path": null,
+      "local_path": "assets/courses/100_level/CIT_108.pdf"
+    },
+    {
+      "id": "mth101",
+      "course_code": "MTH 101",
+      "title": "Elementary Mathematics I",
+      "description": "This course introduces foundational mathematical concepts for students beginning tertiary-level study. Topics usually include set theory, the real number system, algebraic expressions and operations, quadratic equations, sequences and series, complex numbers, trigonometric functions, and binomial theorem. The aim is to develop students’ ability to apply mathematical techniques to solve problems in science, engineering, or general mathematical contexts.",
+      "category": "Theoretical Mathematics",
+      "level": "100 Level",
+      "file_size": 3100000,
+      "is_bundled": true,
+      "firebase_path": null,
+      "local_path": "assets/courses/100_level/MTH_101.pdf"
+    },
+    {
+      "id": "cit202",
+      "course_code": "CIT 202",
+      "title": "Application of Computer in Business",
+      "description": "The course is designed to help business, governance and education managers understand computers and their applications in daily operations. It covers computer basics (definitions, classes, and categories), hardware, software, operating systems, applications systems, database management, life-cycle of systems development, networks, the Internet, security, health & safety, and the role of ICT in business efficiency and development.",
+      "category": "Programming Languages",
+      "level": "200 Level",
+      "file_size": 3200000,
+      "is_bundled": true,
+      "firebase_path": null,
+      "local_path": "assets/courses/200_level/CIT_202.pdf"
+    },
+    {
+      "id": "cit211",
+      "course_code": "CIT 211",
+      "title": "Introduction to Operating Systems",
+      "description": "This course provides a study of operating system concepts and design. It covers the definition and functions of an operating system, its evolution and major design considerations, different types of operating systems (e.g., single-user, multitasking, real-time, distributed), process management (including threads and CPU scheduling), process synchronization (race conditions, mutual exclusion, critical section problems), deadlock and its handling, and memory management techniques such as paging, segmentation and contiguous allocation.",
+      "category": "Operating Systems",
+      "level": "200 Level",
+      "file_size": 3450000,
+      "is_bundled": true,
+      "firebase_path": null,
+      "local_path": "assets/courses/200_level/CIT_211.pdf"
+    },
+    {
+      "id": "cit383",
+      "course_code": "CIT 383",
+      "title": "Introduction to Object-Oriented Programming",
+      "description": "This course introduces the basic concepts and techniques of object-oriented programming (OOP). It covers classes and objects, encapsulation, message passing, inheritance, polymorphism, abstraction, composition, static behaviours, constructors/destructors, and operator overloading using languages such as Java and C#.",
+      "category": "Data Structures & Algorithms",
+      "level": "300 Level",
+      "file_size": 3280000,
+      "is_bundled": true,
+      "firebase_path": null,
+      "local_path": "assets/courses/300_level/CIT_383.pdf"
+    },
+    {
+      "id": "mth382",
+      "course_code": "MTH 382",
+      "title": "Number Theory",
+      "description": "This course explores some of the arithmetic properties of the integers, including number‐theoretic functions, congruences, Diophantine equations, quadratic residues, and classically important problems.",
+      "category": "Theoretical Mathematics",
+      "level": "300 Level",
+      "file_size": 3420000,
+      "is_bundled": true,
+      "firebase_path": null,
+      "local_path": "assets/courses/300_level/MTH_382.pdf"
+    },
+    {
+      "id": "cit401",
+      "course_code": "CIT 401",
+      "title": "ORGANIZATION OF PROGRAMMING LANGUAGES",
+      "description": "This course explores the fundamental principles and techniques involved in the design, implementation and organization of programming languages. Topics include the concept and evolution of programming languages; programming language paradigms (e.g., procedural, object-oriented, functional, logic); language classification and features; language syntax and semantics; data types and data structures; translation phases, compilers and interpreters; and the evaluation and selection of appropriate programming languages for different applications.",
+      "category": "Programming Languages",
+      "level": "400 Level",
+      "file_size": 3400000,
+      "is_bundled": true,
+      "firebase_path": null,
+      "local_path": "assets/courses/400_level/CIT_401.pdf"
+    },
+    {
+      "id": "cit411",
+      "course_code": "CIT 411",
+      "title": "Microcomputers and Microprocessors",
+      "description": "Development of mobile applications for Android and iOS platforms. Topics include mobile UI/UX design, platform-specific development, cross-platform frameworks, mobile databases, and app deployment to app stores.",
+      "category": "Computer Networks",
+      "level": "400 Level",
+      "file_size": 3500000,
+      "is_bundled": true,
+      "firebase_path": null,
+      "local_path": "assets/courses/400_level/CIT_411.pdf"
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "last_updated": "2025-10-20",
+    "total_courses": 8,
+    "total_size": 46330000
+  }
+}

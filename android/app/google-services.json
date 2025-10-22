@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "933358808445",
+    "project_id": "nounmobilelibrary",
+    "storage_bucket": "nounmobilelibrary.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:933358808445:android:9df9647c260303b4c7b014",
+        "android_client_info": {
+          "package_name": "com.example.nounmobilelibrary"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARU_2NKAla4Kd_me9rTx2vnCAVjEv6bs4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
