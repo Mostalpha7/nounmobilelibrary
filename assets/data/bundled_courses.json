@@ -73,6 +73,18 @@
       "local_path": "assets/courses/300_level/MTH_382.pdf"
     },
     {
+      "id": "cit333",
+      "course_code": "CIT 333",
+      "title": "Software Engineering",
+      "description": "This course provides comprehensive coverage of software engineering principles, methodologies, and practices for developing high-quality software systems. Students will learn systematic approaches to software development from requirements gathering through maintenance. Topics include: software development life cycle (SDLC) models (Waterfall, Iterative, Agile), requirements engineering and specification, system analysis and design using UML, software architecture and design patterns, software testing strategies (unit, integration, system, acceptance testing), software project management, risk management, quality assurance, software metrics, configuration management, and software maintenance. The course emphasizes both theoretical foundations and practical application through case studies and projects. Students will gain skills in working within development teams, documenting software systems, and applying industry-standard tools and techniques for building robust, maintainable software solutions.",
+      "category": "Software Engineering",
+      "level": "300 Level",
+      "file_size": 20000,
+      "is_bundled": true,
+      "firebase_path": null,
+      "local_path": "assets/courses/300_level/CIT_333.pdf"
+    },
+    {
       "id": "cit321",
       "course_code": "CIT 321",
       "title": "Advanced Database Systems",
