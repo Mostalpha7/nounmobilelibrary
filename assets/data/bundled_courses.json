@@ -73,6 +73,18 @@
       "local_path": "assets/courses/300_level/MTH_382.pdf"
     },
     {
+      "id": "cit321",
+      "course_code": "CIT 321",
+      "title": "Advanced Database Systems",
+      "description": "This course builds upon foundational database concepts to explore advanced database topics. Students will study database administration, optimization, and modern database technologies. Topics include: query optimization, indexing strategies, distributed databases, database security and recovery, NoSQL databases, data warehousing, and database performance tuning. The course prepares students for professional database administration and design roles.",
+      "category": "Database Systems",
+      "level": "300 Level",
+      "file_size": 420000,
+      "is_bundled": true,
+      "firebase_path": null,
+      "local_path": "assets/courses/300_level/CIT_321.pdf"
+    },
+    {
       "id": "cit401",
       "course_code": "CIT 401",
       "title": "ORGANIZATION OF PROGRAMMING LANGUAGES",
@@ -95,6 +107,18 @@
       "is_bundled": true,
       "firebase_path": null,
       "local_path": "assets/courses/400_level/CIT_411.pdf"
+    },
+    {
+      "id": "cit484",
+      "course_code": "CIT 484",
+      "title": "Website Design & Programming",
+      "description": "This course provides comprehensive training in professional website design and programming. Students will learn to create dynamic, database-driven websites using modern web technologies and best practices. Topics include: advanced HTML5 and CSS3 techniques, JavaScript and jQuery for interactivity, responsive and mobile-first design principles, content management systems (CMS), server-side scripting with PHP or similar languages, MySQL database integration, web security considerations, SEO optimization, and web standards compliance. The course emphasizes practical project-based learning, where students design and develop complete, functional websites from conception to deployment. Students will gain experience with modern development tools, version control, and web hosting environments.",
+      "category": "Web Development",
+      "level": "400 Level",
+      "file_size": 400000,
+      "is_bundled": true,
+      "firebase_path": null,
+      "local_path": "assets/courses/400_level/CIT_484.pdf"
     }
   ],
   "metadata": {
