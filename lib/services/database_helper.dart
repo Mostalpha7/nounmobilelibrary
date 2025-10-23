@@ -434,7 +434,7 @@ class DatabaseHelper {
     final db = await database;
     final List<Map<String, dynamic>> maps = await db.query(
       'categories',
-      orderBy: 'name ASC',
+      orderBy: "CASE WHEN name = 'Other' THEN 1 ELSE 0 END, name ASC",
     );
     return List.generate(maps.length, (i) => Category.fromMap(maps[i]));
   }
