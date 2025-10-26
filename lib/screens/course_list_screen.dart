@@ -343,13 +343,15 @@ class _CourseListScreenState extends State<CourseListScreen> {
               final course = _courses[index];
               return CourseCard(
                 course: course,
-                onTap: () {
-                  Navigator.push(
+                onTap: () async {
+                  await Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (context) => CourseDetailScreen(course: course),
                     ),
                   );
+
+                  _loadCourses();
                 },
               );
             },
