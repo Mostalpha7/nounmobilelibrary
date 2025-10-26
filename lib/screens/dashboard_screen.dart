@@ -17,19 +17,33 @@ class _DashboardScreenState extends State<DashboardScreen> {
   int _currentIndex = 0;
 
   // Screens for each tab
-  final List<Widget> _screens = [
-    const BrowseScreen(),
-    const DownloadsScreen(),
-    const SettingsScreen(),
-  ];
+  // final List<Widget> _screens = [
+  //   const BrowseScreen(),
+  //   const DownloadsScreen(),
+  //   const SettingsScreen(),
+  // ];
 
   // Tab labels
   final List<String> _tabLabels = ['Browse', 'Downloads', 'Settings'];
 
+  Widget _getCurrentScreen() {
+    switch (_currentIndex) {
+      case 0:
+        return const BrowseScreen();
+      case 1:
+        return const DownloadsScreen();
+      case 2:
+        return const SettingsScreen();
+      default:
+        return const BrowseScreen();
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: IndexedStack(index: _currentIndex, children: _screens),
+      // body: IndexedStack(index: _currentIndex, children: _screens),
+      body: _getCurrentScreen(),
       bottomNavigationBar: NavigationBar(
         selectedIndex: _currentIndex,
         onDestinationSelected: (index) {
