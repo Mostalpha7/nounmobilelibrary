@@ -71,7 +71,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
     try {
       final result = await _downloadManager.downloadCourse(
         _course,
-        onProgress: (progress) {
+        onProgress: (progress) async {
           if (mounted) {
             setState(() {
               _downloadProgress = progress;
@@ -79,7 +79,10 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
 
             // Check if download completed
             if (progress.isComplete) {
-              _refreshCourseData();
+              Future.delayed(const Duration(milliseconds: 750), () {
+                _refreshCourseData();
+              });
+
               _showSuccessSnackBar('Download completed!');
             } else if (progress.hasFailed) {
               setState(() => _isDownloading = false);
@@ -131,7 +134,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
     if (confirmed == true) {
       final success = await _downloadManager.deleteDownload(_course);
       if (success) {
-        _refreshCourseData();
+        await _refreshCourseData();
         _showInfoSnackBar('Download deleted');
       } else {
         _showErrorSnackBar('Failed to delete download');
