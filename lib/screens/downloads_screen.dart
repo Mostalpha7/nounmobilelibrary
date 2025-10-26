@@ -276,17 +276,15 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
                 return CourseCard(
                   course: course,
                   onTap: () async {
-                    final result = await Navigator.push(
+                    await Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (context) =>
                             CourseDetailScreen(course: course),
                       ),
                     );
-                    // Refresh if course was deleted
-                    if (result == true) {
-                      _loadDownloads();
-                    }
+
+                    _loadDownloads();
                   },
                 );
               },
