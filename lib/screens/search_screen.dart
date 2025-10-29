@@ -130,7 +130,7 @@ class _SearchScreenState extends State<SearchScreen> {
         title: TextField(
           controller: _searchController,
           focusNode: _searchFocusNode,
-          style: const TextStyle(color: Colors.white),
+          style: const TextStyle(color: Colors.black),
           decoration: InputDecoration(
             hintText: 'Search courses...',
             hintStyle: TextStyle(color: Colors.white.withOpacity(0.7)),
