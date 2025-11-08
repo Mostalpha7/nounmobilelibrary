@@ -112,7 +112,7 @@ class DownloadManager {
       await _dbHelper.insertDownloadProgress(initialProgress);
       onProgress?.call(initialProgress);
 
-      // Get download URL from Firebase
+      // Get download URL from Google Drive
       final downloadUrl = await _firebaseService.getDownloadUrl(
         course.firebasePath!,
       );

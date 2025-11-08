@@ -1,8 +1,6 @@
-import 'dart:io';
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
-import 'package:firebase_storage/firebase_storage.dart';
+// import 'package:firebase_storage/firebase_storage.dart';
 import '../models/course.dart';
 import '../utils/constants.dart';
 
@@ -14,7 +12,7 @@ class FirebaseService {
 
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final FirebaseDatabase _database = FirebaseDatabase.instance;
-  final FirebaseStorage _storage = FirebaseStorage.instance;
+  // final FirebaseStorage _storage = FirebaseStorage.instance;
 
   User? _currentUser;
 
@@ -265,16 +263,16 @@ class FirebaseService {
   Future<String?> getDownloadUrl(String firebasePath) async {
     try {
       // Check if it's already a direct URL (e.g., from Google Drive)
-      if (firebasePath.startsWith('http://') ||
-          firebasePath.startsWith('https://')) {
-        print('Firebase: Using direct URL - $firebasePath');
-        return firebasePath;
-      }
+      // if (firebasePath.startsWith('http://') ||
+      //     firebasePath.startsWith('https://')) {
+      return firebasePath;
+      // print('Firebase: Using direct URL - $firebasePath');
+      // }
 
       // Otherwise, get URL from Firebase Storage
-      final Reference ref = _storage.ref(firebasePath);
-      final String downloadUrl = await ref.getDownloadURL();
-      return downloadUrl;
+      // final Reference ref = _storage.ref(firebasePath);
+      // final String downloadUrl = await ref.getDownloadURL();
+      // return downloadUrl;
     } catch (e) {
       print('Error getting download URL: $e');
       return null;
@@ -282,69 +280,69 @@ class FirebaseService {
   }
 
   /// Get file metadata
-  Future<FullMetadata?> getFileMetadata(String firebasePath) async {
-    try {
-      final Reference ref = _storage.ref(firebasePath);
-      final FullMetadata metadata = await ref.getMetadata();
-      return metadata;
-    } catch (e) {
-      print('Error getting file metadata: $e');
-      return null;
-    }
-  }
+  // Future<FullMetadata?> getFileMetadata(String firebasePath) async {
+  //   try {
+  //     final Reference ref = _storage.ref(firebasePath);
+  //     final FullMetadata metadata = await ref.getMetadata();
+  //     return metadata;
+  //   } catch (e) {
+  //     print('Error getting file metadata: $e');
+  //     return null;
+  //   }
+  // }
 
   /// Upload a course PDF (Admin operation - optional)
-  Future<String?> uploadCoursePdf({
-    required String filePath,
-    required String courseId,
-    required String level,
-    Function(double)? onProgress,
-  }) async {
-    try {
-      // Construct storage path based on level
-      final String storagePath =
-          '${AppConstants.coursesStoragePath}/${level.toLowerCase().replaceAll(' ', '_')}/$courseId.pdf';
+  // Future<String?> uploadCoursePdf({
+  //   required String filePath,
+  //   required String courseId,
+  //   required String level,
+  //   Function(double)? onProgress,
+  // }) async {
+  //   try {
+  //     // Construct storage path based on level
+  //     final String storagePath =
+  //         '${AppConstants.coursesStoragePath}/${level.toLowerCase().replaceAll(' ', '_')}/$courseId.pdf';
 
-      final Reference ref = _storage.ref(storagePath);
-      final UploadTask uploadTask = ref.putFile(
-        filePath as File,
-        SettableMetadata(
-          contentType: 'application/pdf',
-          customMetadata: {
-            'courseId': courseId,
-            'uploadedAt': DateTime.now().toIso8601String(),
-          },
-        ),
-      );
+  //     final Reference ref = _storage.ref(storagePath);
+  //     final UploadTask uploadTask = ref.putFile(
+  //       filePath as File,
+  //       SettableMetadata(
+  //         contentType: 'application/pdf',
+  //         customMetadata: {
+  //           'courseId': courseId,
+  //           'uploadedAt': DateTime.now().toIso8601String(),
+  //         },
+  //       ),
+  //     );
 
-      // Track upload progress
-      uploadTask.snapshotEvents.listen((TaskSnapshot snapshot) {
-        final progress = snapshot.bytesTransferred / snapshot.totalBytes;
-        onProgress?.call(progress);
-      });
+  //     // Track upload progress
+  //     uploadTask.snapshotEvents.listen((TaskSnapshot snapshot) {
+  //       final progress = snapshot.bytesTransferred / snapshot.totalBytes;
+  //       onProgress?.call(progress);
+  //     });
 
-      final TaskSnapshot taskSnapshot = await uploadTask;
-      final String downloadUrl = await taskSnapshot.ref.getDownloadURL();
+  //     final TaskSnapshot taskSnapshot = await uploadTask;
+  //     final String downloadUrl = await taskSnapshot.ref.getDownloadURL();
 
-      print('Firebase: File uploaded successfully - $downloadUrl');
-      return downloadUrl;
-    } catch (e) {
-      print('Error uploading file to Firebase Storage: $e');
-      return null;
-    }
-  }
+  //     print('Firebase: File uploaded successfully - $downloadUrl');
+  //     return downloadUrl;
+  //   } catch (e) {
+  //     print('Error uploading file to Firebase Storage: $e');
+  //     return null;
+  //   }
+  // }
 
   /// Delete course PDF from storage (Admin operation - optional)
-  Future<void> deleteCoursePdf(String firebasePath) async {
-    try {
-      final Reference ref = _storage.ref(firebasePath);
-      await ref.delete();
-      print('Firebase: File deleted successfully - $firebasePath');
-    } catch (e) {
-      print('Error deleting file from Firebase Storage: $e');
-      rethrow;
-    }
-  }
+  // Future<void> deleteCoursePdf(String firebasePath) async {
+  //   try {
+  //     final Reference ref = _storage.ref(firebasePath);
+  //     await ref.delete();
+  //     print('Firebase: File deleted successfully - $firebasePath');
+  //   } catch (e) {
+  //     print('Error deleting file from Firebase Storage: $e');
+  //     rethrow;
+  //   }
+  // }
 
   // ==================== UTILITY OPERATIONS ====================
 
